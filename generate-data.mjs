@@ -15,9 +15,6 @@ for (let i = 0; i < 100; i++) {
         privateKeyEncoding: {type: 'pkcs8', format: 'pem'},
     });
 
-    console.log(`Private key:\n${privateKey.toString()}`);
-    console.log(`Public key:\n${publicKey.toString()}`);
-
     const sign = crypto.createSign(hash);
     sign.write(message);
     sign.end();
